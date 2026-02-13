@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For My Valentine 💖</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            width: 90%;
+            max-width: 500px;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #ff4d88;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .top-message {
+            background: #ffe6f0;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            font-size: 17px;
+            color: #d63384;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .yes-btn {
+            background-color: #ff69b4;
+            color: white;
+        }
+
+        .yes-btn:hover {
+            background-color: #ff1493;
+        }
+
+        .no-btn {
+            background-color: #ddd;
+        }
+
+        .no-btn:hover {
+            background-color: #bbb;
+        }
+
+        .next-btn {
+            background-color: #ff85c1;
+            color: white;
+        }
+
+        .next-btn:hover {
+            background-color: #ff5aa7;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="carousel-container">
+    <div class="carousel-track" id="track">
+
+        <!-- Slide 1 -->
+        <div class="slide">
+            <h1>Before You Answer 💌</h1>
+            <p>
+               So now, here is the part where I want you to answer, I've been preparing this for 2 weeks now, I wanted
+       to surprise youu and wow you hihi. I'm sorry baby this is all I can do for now, things have been pretty tight 
+       especially with finance, this is the first time I made this. A proposal for you, I want you to be my Valentine
+       I love youuuuu sooooo muchhhh my babyyyyyyy I'm gonna make you the happiest woman in the UNIVERSEEEEEE.
+            </p>
+            <button class="btn next-btn" onclick="nextSlide()">Next 💖</button>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+
+            <!-- MESSAGE AT THE TOP (EDIT THIS PART) -->
+            <div class="top-message">
+                "No matter what happens, I will always choose you."
+            </div>
+
+            <h1>Will You Be My Valentine? 💖</h1>
+
+            <button class="btn yes-btn" onclick="location.href='yes.html'">YES 💖</button>
+            <button class="btn no-btn" onclick="location.href='no.html'">No 🙈</button>
+
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const track = document.getElementById("track");
+
+    function nextSlide() {
+        track.style.transform = "translateX(-100%)";
+    }
+
+    function sayYes() {
+        alert("YAYYYY 💕 You just made me the happiest person alive!");
+    }
+
+    function sayNo() {
+        alert("Error 404: 'No' button not supported 😭💖");
+    }
+</script>
+
+</body>
+</html>

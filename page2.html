@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pink Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="gif-container">
+            <h1 class="head">CHOOSE WHAT YOU WANT TO DO</h1>
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyYmF1cHFjdThxOHV0Y3B0b2N1NTViY3d4bXpzNTdqeTZ0NWx2YXZ1dSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/KmxmoHUGPDjfQXqGgv/source.gif" alt="Custom GIF">
+        </div>
+
+        <a href="US.html">
+    <button>READ A STORY</button>
+</a>
+
+        <button>CLICK ME FOR MUSIC</button>
+    </div>
+
+    <!-- 🎵 Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="cute.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Play music when user clicks anywhere
+        document.addEventListener("click", function() {
+            const music = document.getElementById("bgMusic");
+            music.play();
+        }, { once: true }); // plays only first click
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

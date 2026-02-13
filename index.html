@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pink Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="menu">
+        <div class="gif-container">
+            <h1 class="head">HI BABY, WOULD YOU LIKE TO CONTINUE?</h1>
+            <img src="https://media.tenor.com/V0AR3WV6qgoAAAAM/bf.gif" alt="Custom GIF">
+        </div>
+
+        <a href="page2.html">
+    <button>YES</button>
+</a>
+        <a href="page3.html">
+    <button>NO</button>
+</a>
+        <button>CLICK ME FOR MUSIC</button>
+    </div>
+
+    <!-- 🎵 Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="cute.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Play music when user clicks anywhere
+        document.addEventListener("click", function() {
+            const music = document.getElementById("bgMusic");
+            music.play();
+        }, { once: true }); // plays only first click
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

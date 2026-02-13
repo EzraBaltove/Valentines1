@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oh yes! 🥰</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #ffe0ec, #ffd1e6);
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .menu {
+            background: #fff0f6;
+            padding: 30px 40px;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5);
+            max-width: 500px;
+            width: 90%;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ff4da6;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #d63384;
+            font-size: 18px;
+            margin: 20px 0 30px 0;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            background-color: #ff69b4;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        .gif-container img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+
+        /* Lyrics box */
+        .lyrics-box {
+            background: #ffe4f2;
+            border-radius: 20px;
+            padding: 15px 20px;
+            color: #d63384;
+            font-size: 15px;
+            line-height: 1.5;
+            max-height: 250px;
+            overflow-y: auto;
+            margin-top: 20px;
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(255,182,193,0.3);
+        }
+
+        .lyrics-box::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .lyrics-box::-webkit-scrollbar-thumb {
+            background-color: #ff85c1;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <div class="gif-container">
+            <img src="https://media.tenor.com/okLblt2eu1oAAAAM/happy-dance.gif" alt="Celebration GIF">
+        </div>
+
+        <h1>You chose YESSSSSS 💖</h1>
+        <p>YEHEYYYYY I LOVE YOUUU BABYYY KOOOO 💗</p>
+
+        <!-- Buttons -->
+        <button onclick="window.location.href='index.html'">Go Back 💕</button>
+        <button id="musicBtn">🎵 Play Music</button>
+
+        <!-- Lyrics Box -->
+        <div class="lyrics-box">
+            LYRICS:<br>
+Do-do, do-do, do-do, do-do<br>
+Mm, yeah<br>
+My heart, it beats for you<br>
+Though we are miles apart<br>
+My lovin' it will always<br>
+Follow you<br>
+More and more each day<br>
+My heart, it beats for you<br>
+And when the sun sleeps at night<br>
+It's the perfect time 'cause I get to dream of you<br>
+Waiting for the morning light<br>
+Oceans that crash along the shore<br>
+Return to calmer waves across the sea<br>
+A moment of clarity<br>
+No matter what the future holds<br>
+It's you my heart beats for<br>
+And you are like the stars<br>
+That no matter where you are<br>
+I don't feel so far away<br>
+And when night falls<br>
+You always light the way<br>
+And I am but a man<br>
+Orbiting 'round your sun<br>
+And it's you that makes my day, after day (after day, after day)<br>
+Oceans that crash along the shore<br>
+Return to calmer waves across the sea<br>
+A moment of clarity<br>
+That my love remains an open door<br>
+So welcome yourself in<br>
+Come in<br>
+No matter what the future holds<br>
+Para sa 'yo lang tumitibok ang puso ko<br>
+No matter what the future holds<br>
+It's you my heart beats for (yeah)<br>
+It's you my heart beats for (do-do, do-do)<br>
+It's you my heart beats for
+        </div>
+
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="Beat.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const music = document.getElementById("bgMusic");
+        const musicBtn = document.getElementById("musicBtn");
+
+        musicBtn.addEventListener("click", () => {
+            if (music.paused) {
+                music.play();
+                musicBtn.innerText = "⏸ Pause Music";
+            } else {
+                music.pause();
+                musicBtn.innerText = "🎵 Play Music";
+            }
+        });
+    </script>
+
+</body>
+</html>
